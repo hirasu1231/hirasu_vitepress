@@ -6,7 +6,7 @@ const pageSize = 10
 
 export default defineConfig({
     title: 'Vitepress blog',
-    base: '/hirasu_vitepress/',
+    base: '/vitepress_sample/',
     cacheDir: './node_modules/vitepress_cache',
     description: 'vitepress,blog,blog-theme',
     ignoreDeadLinks: true,
