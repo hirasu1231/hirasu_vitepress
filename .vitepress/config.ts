@@ -23,7 +23,8 @@ export default defineConfig({
             { text: 'Home', link: '/' },
             { text: 'Category', link: '/pages/category' },
             { text: 'Archives', link: '/pages/archives' },
-            { text: 'Tags', link: '/pages/tags' }
+            { text: 'Tags', link: '/pages/tags' },
+            // { text: 'About', link: '/pages/about' }
             // { text: 'Airene', link: 'http://airene.net' }  -- External link test
         ],
         search: {
@@ -33,10 +34,14 @@ export default defineConfig({
         outline:{
             label:'文章摘要'
         },
-        socialLinks: [{ icon: 'github', link: 'https://github.com/hirasu1231' }]
+        socialLinks: [{ icon: 'github', link: 'https://github.com/hirasu123' }]
+        
     } as any,
     srcExclude: ['README.md'], // exclude the README.md , needn't to compiler
 
+    markdown: {
+        math: true
+    },
     vite: {
         // build: { minify: false }
         server: { port: 5173 }
@@ -46,4 +51,5 @@ export default defineConfig({
           keepNames: true
       }
       */
+    
 })
