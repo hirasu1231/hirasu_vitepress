@@ -5,7 +5,7 @@ import { getPosts } from './theme/serverUtils'
 const pageSize = 10
 
 export default defineConfig({
-    title: 'Vitepress blog',
+    title: 'ハムレットエンジニアのカンニングノート',
     base: '/hirasu_vitepress/',
     cacheDir: './node_modules/vitepress_cache',
     description: 'vitepress,blog,blog-theme',
@@ -23,8 +23,7 @@ export default defineConfig({
             { text: 'Home', link: '/' },
             { text: 'Category', link: '/pages/category' },
             { text: 'Archives', link: '/pages/archives' },
-            { text: 'Tags', link: '/pages/tags' },
-            { text: 'About', link: '/pages/about' }
+            { text: 'Tags', link: '/pages/tags' }
             // { text: 'Airene', link: 'http://airene.net' }  -- External link test
         ],
         search: {
@@ -34,7 +33,7 @@ export default defineConfig({
         outline:{
             label:'文章摘要'
         },
-        socialLinks: [{ icon: 'github', link: 'https://github.com/airene/vitepress-blog-pure' }]
+        socialLinks: [{ icon: 'github', link: 'https://github.com/hirasu1231' }]
     } as any,
     srcExclude: ['README.md'], // exclude the README.md , needn't to compiler
 
