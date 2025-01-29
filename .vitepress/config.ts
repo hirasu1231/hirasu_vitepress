@@ -5,6 +5,28 @@ import { getPosts } from './theme/serverUtils'
 const pageSize = 10
 
 export default defineConfig({
+    head: [
+        [
+          'script',
+          {
+            async: '',
+            src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2263820744635038',
+            crossorigin: 'anonymous'
+          }
+        ],
+        [
+          'script',
+          {
+            async: '',
+            src: 'https://www.googletagmanager.com/gtag/js?id=G-GR0QFK5G9'
+          }
+        ],
+        [
+          'script',
+          {},
+          "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-GR0QFK5G9');"
+        ] 
+    ],
     title: 'ハムレットエンジニアのカンニングノート',
     base: '/hirasu_vitepress/',
     cacheDir: './node_modules/vitepress_cache',
@@ -45,7 +67,8 @@ export default defineConfig({
     vite: {
         // build: { minify: false }
         server: { port: 5173 }
-    }
+    },
+
     /*
       optimizeDeps: {
           keepNames: true
