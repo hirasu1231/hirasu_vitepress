@@ -46,6 +46,9 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: .vitepress/dist
+      - name: create CNAME
+        run: touch .vitepress/dist/CNAME && echo www.hamlet-engineer.com >> .vitepress/dist/CNAME
+  
 
   # Deployment job
   deploy:
