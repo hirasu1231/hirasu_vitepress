@@ -18,9 +18,6 @@ VuepressのSEO関係の設定を実装します．本稿では，Google Search C
 
 
 
-
-
-
 ## ファイル構成
 ファイル構成は以下通りです．
 ```
@@ -60,11 +57,13 @@ hamlet_engineer
 Google Search Consoleは、Webサイトの掲載順位を測定したり、サイト内部の問題をいち早く把握することができるサービスです．
 
 ### Google Search Consoleの登録
-[Googleサーチコンソールの登録・設定方法](https://cluster-seo.com/blog/register-search-console.html)を参考に，Google Search Consoleに登録してサイト認証タグを確認します．<br>
+[Googleサーチコンソールの登録・設定方法](https://cluster-seo.com/blog/register-search-console.html)を参考に，Google Search Consoleに登録してサイト認証タグを確認します．
+
 !(/image/tech_0004/GoogleSearchConsole.png)
 
 ### config.jsの設定
 [VuePressに GoogleSearchConsole のメタタグを埋め込む](https://kitigai.hatenablog.com/entry/2019/03/28/233451)を参考に追記します．
+
 ```js
 // サイト認証タグ: <meta name="google-site-verification" content="XXXXXXX" />
 module.exports = {
@@ -72,7 +71,7 @@ module.exports = {
 }
 ```
 
-<br>
+
 
 ## vuepress-plugin-sitemap
 以下のコードでインストールできます．
@@ -80,25 +79,36 @@ module.exports = {
 yarn add vuepress-plugin-sitemap
 ```
 ### vuepress-plugin-sitemapとは
-vuepress-plugin-sitemapはサイトマップの設定をできるプラグインです．<br>
-調べた結果，検索されやすいように自分のHPの案内図をGoogle様に送るという理解です．<br>
+vuepress-plugin-sitemapはサイトマップの設定をできるプラグインです．
+
+調べた結果，検索されやすいように自分のHPの案内図をGoogle様に送るという理解です．
+
 下記の引用元から，サイトマップとはクローラーがGoogleに報告しやすいように自分のHPの案内図という理解です．
 
-> サイトマップとはサイト上の各ファイルの情報/関係を伝えるファイルです．<br>
-Google などの検索エンジンはサイトマップを読み込むことで、より高度なクロールを行います．<br>
-引用元：[VuePress でサイトマップを設定する](https://hene.dev/blog/2019/05/02/sitemap)<br>
-<br>
-サイトマップとはサイトにどのようなコンテンツがあるのかを一覧でまとめてみれるページのことだ。<br>
+> サイトマップとはサイト上の各ファイルの情報/関係を伝えるファイルです．
+
+Google などの検索エンジンはサイトマップを読み込むことで、より高度なクロールを行います．
+
+引用元：[VuePress でサイトマップを設定する](https://hene.dev/blog/2019/05/02/sitemap)
+
+
+
+サイトマップとはサイトにどのようなコンテンツがあるのかを一覧でまとめてみれるページのことだ。
+
 サイトマップにはユーザーや検索エンジンにサイトの内容をわかりやすく伝える役割がある。
 引用元：[SEO効果アップ！サイトマップの仕組みと理想的な作成方法を紹介](https://bazubu.com/how-to-create-an-effective-site-map-26793.html)
-<br>
+
+
 
 下記の引用元から，クロールとは自分のサイトを調べ尽くしてくれるロボット(クローラー)を招待して，Googleに検索されやすいように報告してもらえるようにするという理解です．
-> クロールとは、“crawler（クローラー）と呼ばれるインターネットの上にあるWeb サイトやホームページの情報をかき集めるロボットが、自分のサイトに来ること”です。<br>
-引用元：[Google検索の仕組み「クロール」と「インデックス」の違い](https://seeds-create.co.jp/google-search-console-crawl-index/)<br>
+> クロールとは、“crawler（クローラー）と呼ばれるインターネットの上にあるWeb サイトやホームページの情報をかき集めるロボットが、自分のサイトに来ること”です。
+
+引用元：[Google検索の仕組み「クロール」と「インデックス」の違い](https://seeds-create.co.jp/google-search-console-crawl-index/)
+
 
 ### config.jsの設定
-[vuepress-plugin-sitemap でサイトマップ自動生成](https://hapicode.com/vuepress/sitemap.html#vuepress-config-js-%E8%A8%AD%E5%AE%9A%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E5%A4%89%E6%9B%B4)を参考にしています．<br>
+[vuepress-plugin-sitemap でサイトマップ自動生成](https://hapicode.com/vuepress/sitemap.html#vuepress-config-js-%E8%A8%AD%E5%AE%9A%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E5%A4%89%E6%9B%B4)を参考にしています．
+
 ```js
 //.vuepress/config.jsに追記してください 
 module.exports = {
@@ -133,12 +143,14 @@ Sitemap : https://hirasu1231.github.io/hamlet_engineer/sitemap.xml
 ```
 yarn build
 ```
-そして，[VuePress でサイトマップを設定する](https://hene.dev/blog/2019/05/02/sitemap)を参考に[Google Search Console](https://search.google.com/search-console/about?hl=ja)にサイトマップを登録します．<br>
+そして，[VuePress でサイトマップを設定する](https://hene.dev/blog/2019/05/02/sitemap)を参考に[Google Search Console](https://search.google.com/search-console/about?hl=ja)にサイトマップを登録します．
+
 !(/image/tech_0004/sitemap.png)
 
 
 
-<br>
+
+
 
 ## plugin-google-analytics
 以下のコードでインストールできます．
@@ -147,13 +159,16 @@ yarn add -D @vuepress/plugin-google-analytics
 ```
 
 ### plugin-google-analyticsとは
-Google Analyticsのセットアップを行うことができるようになります．<br>
-最新のGA4で発行されるG-00000000のIDは未対応のため，必ずUA-00000000-0も発行されるように，[Googleアナリティクスの登録・設置方法【2021年版】](https://blog.siteanatomy.com/register-google-analytics/)を参考に登録してください．<br>
+Google Analyticsのセットアップを行うことができるようになります．
+
+最新のGA4で発行されるG-00000000のIDは未対応のため，必ずUA-00000000-0も発行されるように，[Googleアナリティクスの登録・設置方法【2021年版】](https://blog.siteanatomy.com/register-google-analytics/)を参考に登録してください．
+
 !(/image/tech_0004/GoogleAnalytics.png)
 
 
 ### config.jsの設定
-[【VuePress】Google Analyticsを導入する](https://ichiya.netlify.app/posts/2019/12/10/_20191210.html)を参考にしています．<br>
+[【VuePress】Google Analyticsを導入する](https://ichiya.netlify.app/posts/2019/12/10/_20191210.html)を参考にしています．
+
 ```js
 module.exports = {
     plugins: {
@@ -167,10 +182,12 @@ module.exports = {
 }
 ```
 
-<br>
+
+
 
 ## vuepress-plugin-seo
-本章については，参考サイト，ドキュメントを見てもOGP画像の設定が実装できなかったので，また後日挑戦します．<br>
+本章については，参考サイト，ドキュメントを見てもOGP画像の設定が実装できなかったので，また後日挑戦します．
+
 プラグインは以下のコードでインストールできます．
 ```
 yarn add -D vuepress-plugin-seo
@@ -180,7 +197,8 @@ yarn add -D vuepress-plugin-seo
 metaタグという記事コンテンツの情報を検索エンジンやブラウザに伝えるための情報を生成してくれるプラグインと、SNSでリンクした際などにプレビュー表示を自動で生成してくれるプラグインです．
 
 ### config.jsの設定
-[VuePressでOGP自動設定 (seoプラグイン＆placehold.jp編)](https://dorasu-tech.dorasu.com/posts/2020/01/24/vuepress-ogp-autogen.html)を参考にしています．<br>
+[VuePressでOGP自動設定 (seoプラグイン＆placehold.jp編)](https://dorasu-tech.dorasu.com/posts/2020/01/24/vuepress-ogp-autogen.html)を参考にしています．
+
 ```js
 module.exports = {
     plugins: {
@@ -202,7 +220,10 @@ module.exports = {
     }
     
 ```
-僕は参考サイトの通りでやってもできませんでしたが，一応下記にまとめました．<br>
+
+僕は参考サイトの通りでやってもできませんでしたが，一応下記にまとめました．
+
+
 ```
 # 1.プレビュー表示の背景となる画像の設定
 # 背景色・文字色はRGBの16進数表記
@@ -214,7 +235,8 @@ https://placehold.jp/057/333/150x40.png?text=Hamlet_engineer
 https://placehold.jp/40//fff/600x315.png?css=%7B"padding"%3A"%200%2080px"%2C"background-image"%3A"%20url(https%3A%2F%2Fplacehold.jp%2F057%2F333%2F130x40.png%3Ftext%3Dhamlet_engineer)"%7D&text=600x315ピクセルの画像として、ページのタイトルを使って画像生成
 ```
 
-<br>
+
+
 
 ## vuepress-plugin-feed
 以下のコードでインストールできます．
@@ -225,7 +247,8 @@ yarn add -D vuepress-plugin-feed
 サイトの見出しや要約・更新情報などを記述するRSSというファイルを生成するプラグインです．
 
 ### config.jsの設定
-[VuePressのブログテーマ使ってみた。](https://inkohx.dev/2020/06/29/using-vuepress-blog-theme/)を参考にしています．<br>
+[VuePressのブログテーマ使ってみた。](https://inkohx.dev/2020/06/29/using-vuepress-blog-theme/)を参考にしています．
+
 ```js
 module.exports = {
   themeConfig: {
@@ -237,51 +260,76 @@ module.exports = {
 }
 ```
 
-<br>
+
+
 
 ## まとめ
-vuepressのSEOの設定を実施しました．思ったよりもかなり時間がかかりました．<br>
+vuepressのSEOの設定を実施しました．思ったよりもかなり時間がかかりました．
+
 OPGについては，また後日挑戦します．
 
-<br>
+
+
 
 ## 参考サイト
-[Vuepress で ブログを作る](https://blog.ouvill.net/blog/2019-03-30--vuepress_blog/make_vuepress_blog/)<br>
+[Vuepress で ブログを作る](https://blog.ouvill.net/blog/2019-03-30--vuepress_blog/make_vuepress_blog/)
+
 
 ### 参考サイト(Google Search Console)
-[Google Search Console](https://search.google.com/search-console/about?hl=ja)<br>
-[VuePressに GoogleSearchConsole のメタタグを埋め込む](https://kitigai.hatenablog.com/entry/2019/03/28/233451)<br>
-[新規サイトが検索に出てこない！まずやるべき7つのSEO対策](https://www.deepcrawl.jp/blog/column/seo/seven-seo-measures-you-must-do-first-if-you-start-a-new-site/)<br>
+[Google Search Console](https://search.google.com/search-console/about?hl=ja)
+
+[VuePressに GoogleSearchConsole のメタタグを埋め込む](https://kitigai.hatenablog.com/entry/2019/03/28/233451)
+
+[新規サイトが検索に出てこない！まずやるべき7つのSEO対策](https://www.deepcrawl.jp/blog/column/seo/seven-seo-measures-you-must-do-first-if-you-start-a-new-site/)
+
 [Googleサーチコンソールの登録・設定方法](https://cluster-seo.com/blog/register-search-console.html)
 
 ### 参考サイト(vuepress-plugin-sitemap)
-[vuepress-plugin-sitemap](https://github.com/ekoeryanto/vuepress-plugin-sitemap)<br>
-[VuePress でサイトマップを設定する](https://hene.dev/blog/2019/05/02/sitemap)<br>
-[Google検索の仕組み「クロール」と「インデックス」の違い](https://seeds-create.co.jp/google-search-console-crawl-index/)<br>
-[SEO効果アップ！サイトマップの仕組みと理想的な作成方法を紹介](https://bazubu.com/how-to-create-an-effective-site-map-26793.html)<br>
-[【VuePress・SEO】サイトマップの作り方【2つ送るだけ】](https://www.toybox-emomi.work/2020/07/22/_20200722/)<br>
-[vuepress-plugin-sitemap でサイトマップ自動生成](https://hapicode.com/vuepress/sitemap.html#vuepress-config-js-%E8%A8%AD%E5%AE%9A%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E5%A4%89%E6%9B%B4)<br>
-[VuePress に Google Analytics を追加する](https://blog.raispg.com/posts/2020/10/14/vuepress-ga.html)<br>
+[vuepress-plugin-sitemap](https://github.com/ekoeryanto/vuepress-plugin-sitemap)
+
+[VuePress でサイトマップを設定する](https://hene.dev/blog/2019/05/02/sitemap)
+
+[Google検索の仕組み「クロール」と「インデックス」の違い](https://seeds-create.co.jp/google-search-console-crawl-index/)
+
+[SEO効果アップ！サイトマップの仕組みと理想的な作成方法を紹介](https://bazubu.com/how-to-create-an-effective-site-map-26793.html)
+
+[【VuePress・SEO】サイトマップの作り方【2つ送るだけ】](https://www.toybox-emomi.work/2020/07/22/_20200722/)
+
+[vuepress-plugin-sitemap でサイトマップ自動生成](https://hapicode.com/vuepress/sitemap.html#vuepress-config-js-%E8%A8%AD%E5%AE%9A%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E5%A4%89%E6%9B%B4)
+
+[VuePress に Google Analytics を追加する](https://blog.raispg.com/posts/2020/10/14/vuepress-ga.html)
+
 
 ### 参考サイト(plugin-google-analytic)
-[plugin-google-analytics](https://v1.vuepress.vuejs.org/plugin/official/plugin-google-analytics.html)<br>
-[【VuePress】Google Analyticsを導入する](https://ichiya.netlify.app/posts/2019/12/10/_20191210.html)<br>
-[GoogleアナリティクスのトラッキングIDの基本【確認・設置方法】](https://blog.siteanatomy.com/2020/05/tracking-id.html)<br>
-[Googleアナリティクスの登録・設置方法【2021年版](https://blog.siteanatomy.com/register-google-analytics/)<br>
+[plugin-google-analytics](https://v1.vuepress.vuejs.org/plugin/official/plugin-google-analytics.html)
+
+[【VuePress】Google Analyticsを導入する](https://ichiya.netlify.app/posts/2019/12/10/_20191210.html)
+
+[GoogleアナリティクスのトラッキングIDの基本【確認・設置方法】](https://blog.siteanatomy.com/2020/05/tracking-id.html)
+
+[Googleアナリティクスの登録・設置方法【2021年版](https://blog.siteanatomy.com/register-google-analytics/)
+
 
 
 ### 参考サイト(vuepress-plugin-seo)
-[vuepress-plugin-se(https://github.com/lorisleiva/vuepress-plugin-seo)<br>
-[VuePressでOGP自動設定 (seoプラグイン＆placehold.jp編)](https://dorasu-tech.dorasu.com/posts/2020/01/24/vuepress-ogp-autogen.html)<br>
-[metaタグ（メタタグ）とは？SEO効果のある記述箇所とポイントを紹介](https://ferret-plus.com/13074#:~:text=meta%E3%82%BF%E3%82%B0%E3%81%A8%E3%81%AF%E8%A8%98%E4%BA%8B,%E4%BC%9D%E3%81%88%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E6%83%85%E5%A0%B1%E3%81%A7%E3%81%99%E3%80%82)<br>
-[meta description（要約タグ）の使い方](https://ferret-plus.com/curriculums/1358)<br>
+[vuepress-plugin-se(https://github.com/lorisleiva/vuepress-plugin-seo)
+
+[VuePressでOGP自動設定 (seoプラグイン＆placehold.jp編)](https://dorasu-tech.dorasu.com/posts/2020/01/24/vuepress-ogp-autogen.html)
+
+[metaタグ（メタタグ）とは？SEO効果のある記述箇所とポイントを紹介](https://ferret-plus.com/13074#:~:text=meta%E3%82%BF%E3%82%B0%E3%81%A8%E3%81%AF%E8%A8%98%E4%BA%8B,%E4%BC%9D%E3%81%88%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E6%83%85%E5%A0%B1%E3%81%A7%E3%81%99%E3%80%82)
+
+[meta description（要約タグ）の使い方](https://ferret-plus.com/curriculums/1358)
+
 [Placehold.jp](http://placehold.jp/#basic-tab)
 [イラストダウンロード](https://illust.download/archives/31254)
 
 ### 参考サイト(vuepress-plugin-feed)
-[vuepress-plugin-feed](https://github.com/webmasterish/vuepress-plugin-feed)<br>
-[VuePressのブログテーマ使ってみた。](https://inkohx.dev/2020/06/29/using-vuepress-blog-theme/)<br>
-[RSSとは？基本の仕組みと便利な使い方](https://uxmilk.jp/44993)<br>
+[vuepress-plugin-feed](https://github.com/webmasterish/vuepress-plugin-feed)
+
+[VuePressのブログテーマ使ってみた。](https://inkohx.dev/2020/06/29/using-vuepress-blog-theme/)
+
+[RSSとは？基本の仕組みと便利な使い方](https://uxmilk.jp/44993)
+
 
 
 
