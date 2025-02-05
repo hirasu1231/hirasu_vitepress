@@ -1,0 +1,24 @@
+import{_ as i,c as l,j as r,G as a,w as p,ag as o,B as t,o as c}from"./chunks/framework.BDI6Vt0-.js";const f=JSON.parse('{"title":"Vuepressで作成したブログをGIthub Pageで公開する","description":"サーバーを契約するのが面倒くさいので，Github PagesでVuepressを公開します．","frontmatter":{"title":"Vuepressで作成したブログをGIthub Pageで公開する","description":"サーバーを契約するのが面倒くさいので，Github PagesでVuepressを公開します．","date":"2021-02-02T00:00:00.000Z","category":["Vuepress"],"tags":["Vuepress"]},"headers":[],"relativePath":"posts/vuepress_0002.md","filePath":"posts/vuepress_0002.md"}'),u={name:"posts/vuepress_0002.md"};function d(h,s,g,b,m,_){const e=t("CallInArticleAdsense"),n=t("ClientOnly");return c(),l("div",null,[s[0]||(s[0]=r("p",null,"サーバーを契約するのが面倒くさいので，Github PagesでVuepressを公開します．",-1)),a(n,null,{default:p(()=>[a(e)]),_:1}),s[1]||(s[1]=o(`<h2 id="vuepressをビルド" tabindex="-1">Vuepressをビルド <a class="header-anchor" href="#vuepressをビルド" aria-label="Permalink to &quot;Vuepressをビルド&quot;">​</a></h2><p>ビルドが終了するとdocsディレクトリが生成され，その中にビルドファイルが出力されます． ビルドファイルで動作確認するにはgoogle chromeのWeb Server for Chromeという拡張機能を利用すると便利です．</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span># ビルド</span></span>
+<span class="line"><span>yarn build</span></span></code></pre></div><p>!(/image/tech_0002/webserver.png)</p><h2 id="github-pagesでホスティングする" tabindex="-1">GitHub Pagesでホスティングする <a class="header-anchor" href="#github-pagesでホスティングする" aria-label="Permalink to &quot;GitHub Pagesでホスティングする&quot;">​</a></h2><p>ビルドしたvuepressをGitHub Pagesでホスティングします．そのためにはリポジトリが必要になるのでプロジェクトと同じ名前で”hamlet_engineer”というリポジトリを作成します．<br><br> config.jsの中身では以下のように設定できます．</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>// GitHub Pagesにホスティング</span></span>
+<span class="line"><span>// base:リポジトリの名前,dest:出力ディレクトリの名前</span></span>
+<span class="line"><span>base: &#39;/hamlet_engineer/&#39;,</span></span>
+<span class="line"><span>dest: &#39;docs&#39;,</span></span></code></pre></div><h2 id="ファイル構成" tabindex="-1">ファイル構成 <a class="header-anchor" href="#ファイル構成" aria-label="Permalink to &quot;ファイル構成&quot;">​</a></h2><p>ファイル構成は以下通りです．</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>hamlet_engineer</span></span>
+<span class="line"><span>├── src</span></span>
+<span class="line"><span>│   ├── _posts</span></span>
+<span class="line"><span>│   │   └── 20190803.md</span></span>
+<span class="line"><span>│   │   └── 20210118.md</span></span>
+<span class="line"><span>│   └── .vuepress</span></span>
+<span class="line"><span>│       ├── public</span></span>
+<span class="line"><span>│       │    ├── img</span></span>
+<span class="line"><span>│       │          └── hirasu.jpg</span></span>
+<span class="line"><span>│       │    </span></span>
+<span class="line"><span>│       └── config.js</span></span>
+<span class="line"><span>├── package.json</span></span>
+<span class="line"><span>├── yarn.lock</span></span>
+<span class="line"><span>├── /.git</span></span>
+<span class="line"><span>└── docs</span></span>
+<span class="line"><span>    ├── /assets</span></span>
+<span class="line"><span>    ├── /img</span></span>
+<span class="line"><span>    ├── /posts</span></span>
+<span class="line"><span>    ├── 404.html</span></span>
+<span class="line"><span>    └── index.html</span></span></code></pre></div><h2 id="docsを公開する設定を行う" tabindex="-1">docsを公開する設定を行う <a class="header-anchor" href="#docsを公開する設定を行う" aria-label="Permalink to &quot;docsを公開する設定を行う&quot;">​</a></h2><p>vuepressをコミットしGitHubのリポジトリへpushします.<br> 次にリポジトリのsettingsページのOptionsで下にスクロールすると，GitHub Pagesの設定があります．<br> そして，sourceを&quot;None&quot;から&quot;main branch /docs folder&quot;へ変更して保存します.<br> 反映されるまでに時間がかかりますが，しばらくすると以下のようなURLで表示されます．<br><a href="https://hirasu1231.github.io/hamlet_engineer" target="_blank" rel="noreferrer">https://hirasu1231.github.io/hamlet_engineer</a></p><p>!(/image/tech_0002/GithubPages.png)</p><h2 id="参考サイト" tabindex="-1">参考サイト <a class="header-anchor" href="#参考サイト" aria-label="Permalink to &quot;参考サイト&quot;">​</a></h2><ul><li><a href="https://qiita.com/rubytomato@github/items/f8153f0d00f89ba87ed5#docs%E3%82%92%E5%85%AC%E9%96%8B%E3%81%99%E3%82%8B%E8%A8%AD%E5%AE%9A%E3%82%92%E8%A1%8C%E3%81%86" target="_blank" rel="noreferrer">VuePressで作成した静的サイトをGitHub Pagesで公開する</a></li></ul>`,15)),a(n,null,{default:p(()=>[a(e)]),_:1})])}const P=i(u,[["render",d]]);export{f as __pageData,P as default};
