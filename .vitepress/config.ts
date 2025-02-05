@@ -28,7 +28,7 @@ export default defineConfig({
         ] 
     ],
     title: 'ハムレットエンジニアのカンニングノート',
-    base: '/hirasu_vitepress/',
+    base: '/',
     cacheDir: './node_modules/vitepress_cache',
     description: 'vitepress,blog,blog-theme',
     ignoreDeadLinks: true,
