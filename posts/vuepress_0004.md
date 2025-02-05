@@ -218,21 +218,19 @@ module.exports = {
       domain: 'https://hirasu1231.github.io/hamlet_engineer',
       }
     }
-    
 ```
 
 僕は参考サイトの通りでやってもできませんでしたが，一応下記にまとめました．
 
+```js
+//  1.プレビュー表示の背景となる画像の設定
+//  背景色・文字色はRGBの16進数表記
+// http://placehold.jp/{背景色}/{文字色}/{幅}x{高さ}.png?text={テキスト}
+// https://placehold.jp/057/333/150x40.png?text=Hamlet_engineer
 
-```
-# 1.プレビュー表示の背景となる画像の設定
-# 背景色・文字色はRGBの16進数表記
-# http://placehold.jp/{背景色}/{文字色}/{幅}x{高さ}.png?text={テキスト}
-https://placehold.jp/057/333/150x40.png?text=Hamlet_engineer
-
-# 2.プレビュー表示の画像(1.を使う)
-# https://placehold.jp/{文字の大きさ}//{文字色}/{幅}x{高さ}.png?css={%22padding%22:%22%200%2080px%22,%22background-image%22:%22%20url({背景画像のURL})%22}&text={テキスト}
-https://placehold.jp/40//fff/600x315.png?css=%7B"padding"%3A"%200%2080px"%2C"background-image"%3A"%20url(https%3A%2F%2Fplacehold.jp%2F057%2F333%2F130x40.png%3Ftext%3Dhamlet_engineer)"%7D&text=600x315ピクセルの画像として、ページのタイトルを使って画像生成
+//  2.プレビュー表示の画像(1.を使う)
+//  https://placehold.jp/{文字の大きさ}//{文字色}/{幅}x{高さ}.png?css={%22padding%22:%22%200%2080px%22,%22background-image%22:%22%20url({背景画像のURL})%22}&text={テキスト}
+// https://placehold.jp/40//fff/600x315.png?css=%7B"padding"%3A"%200%2080px"%2C"background-image"%3A"%20url(https%3A%2F%2Fplacehold.jp%2F057%2F333%2F130x40.png%3Ftext%3Dhamlet_engineer)"%7D&text=600x315ピクセルの画像として、ページのタイトルを使って画像生成
 ```
 
 
@@ -243,6 +241,7 @@ https://placehold.jp/40//fff/600x315.png?css=%7B"padding"%3A"%200%2080px"%2C"bac
 ```
 yarn add -D vuepress-plugin-feed
 ```
+
 ### vuepress-plugin-feedとは
 サイトの見出しや要約・更新情報などを記述するRSSというファイルを生成するプラグインです．
 
