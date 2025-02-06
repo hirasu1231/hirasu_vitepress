@@ -1,7 +1,7 @@
 ---
 title: 'Pythonでガントチャートを作成する方法'
 description: この記事では、Pythonを使ってガントチャートを作成する方法について解説します。
-date: 2024-02-06
+date: 2025-02-06
 category: 
   - 可視化
 tags:
