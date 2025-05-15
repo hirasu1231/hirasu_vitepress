@@ -47,7 +47,7 @@ jobs:
         with:
           path: .vitepress/dist
       - name: create CNAME
-        run: touch .vitepress/dist/CNAME && echo www.hamlet-engineer.com >> .vitepress/dist/CNAME
+        run: touch .vitepress/dist/CNAME && echo www.poor-engineer.com >> .vitepress/dist/CNAME
   
 
   # Deployment job
