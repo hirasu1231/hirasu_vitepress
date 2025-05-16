@@ -9,8 +9,7 @@ export default defineConfig({
         [
           'script',
           {
-            async: '',
-            src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2263820744635038',
+            async: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2263820744635038',
             crossorigin: 'anonymous'
           }
         ],
